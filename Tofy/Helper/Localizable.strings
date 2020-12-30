@@ -1,0 +1,36 @@
+/* 
+  LocalizedStrings.strings
+  Tofy
+
+  Created by usuario on 28/12/20.
+  
+*/
+
+
+"appName" = "Tofy Keys";
+"email" = "Email";
+"pass" = "Contraseña";
+"entrar" = "Entrar";
+"noTienesCuenta" = "¿No tienes cuenta?¡Registrate aquí!";
+"registroInfo" = "Registrate en Tofy y disfruta de todas las ventajas";
+"repetirPass" = "Repetir contraseña";
+"continuar" = "Continuar";
+"configurarPinInfo" = "Configura un PIN para poder acceder de forma más segura a Tofy Keys";
+"configurarAhora" = "Configurar ahora";
+"masTarde" = "Más tarde";
+"pinViewInfo" = "Crea un código de 4 dígitos para acceder a Tofy Keys";
+"biometriaInfo" = "Hemos detectado que tiene un método biométrico enrolado en su dispositivo. Actívalo para que la entrada a Tofy Keys sea más rápida.";
+"activarBiometria" = "Activar biometría";
+"seguridad" = "Seguridad";
+"appInfo" = "App info";
+"ninguna" = "Ninguna";
+"pin" = "PIN";
+"biometria" = "Biometría";
+"guardar" = "Guardar";
+"nuevoPinBoton" = "Crear nuevo PIN";
+"usuario" = "Usuario";
+"titulo" = "Título";
+"eliminar" = "Eliminar";
+"editar" = "Editar";
+"actualizar" = "Actualizar";
+"cerrarSesion" = "Cerrar Sesión";

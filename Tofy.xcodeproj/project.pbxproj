@@ -3,18 +3,64 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		84D3EC4D2577F6DF006A7613 /* TofyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC4C2577F6DF006A7613 /* TofyApp.swift */; };
-		84D3EC4F2577F6DF006A7613 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC4E2577F6DF006A7613 /* ContentView.swift */; };
 		84D3EC512577F6E1006A7613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3EC502577F6E1006A7613 /* Assets.xcassets */; };
 		84D3EC542577F6E1006A7613 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3EC532577F6E1006A7613 /* Preview Assets.xcassets */; };
 		84D3EC562577F6E1006A7613 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC552577F6E1006A7613 /* Persistence.swift */; };
 		84D3EC592577F6E1006A7613 /* Tofy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC572577F6E1006A7613 /* Tofy.xcdatamodeld */; };
 		84D3EC642577F6E1006A7613 /* TofyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC632577F6E1006A7613 /* TofyTests.swift */; };
 		84D3EC6F2577F6E1006A7613 /* TofyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC6E2577F6E1006A7613 /* TofyUITests.swift */; };
+		84D3EC812577F8A2006A7613 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC802577F8A2006A7613 /* LoginView.swift */; };
+		84D3EC822577F8A2006A7613 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC802577F8A2006A7613 /* LoginView.swift */; };
+		84D3EC832577F8A2006A7613 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC802577F8A2006A7613 /* LoginView.swift */; };
+		84D3EC8B2577F8AD006A7613 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC8A2577F8AD006A7613 /* LoginViewModel.swift */; };
+		84D3EC8C2577F8AD006A7613 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC8A2577F8AD006A7613 /* LoginViewModel.swift */; };
+		84D3EC8D2577F8AD006A7613 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EC8A2577F8AD006A7613 /* LoginViewModel.swift */; };
+		84F41407259102CE007B47B5 /* Botones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41406259102CE007B47B5 /* Botones.swift */; };
+		84F41415259400CB007B47B5 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41414259400CB007B47B5 /* ApiManager.swift */; };
+		84F4141E2594FE05007B47B5 /* RegistroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4141D2594FE05007B47B5 /* RegistroView.swift */; };
+		84F414242594FE3D007B47B5 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414232594FE3D007B47B5 /* InfoView.swift */; };
+		84F4142C259502C6007B47B5 /* RegistroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4142B259502C6007B47B5 /* RegistroViewModel.swift */; };
+		84F414312597251E007B47B5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414302597251E007B47B5 /* BaseView.swift */; };
+		84F414372597266A007B47B5 /* ConfigurarPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414362597266A007B47B5 /* ConfigurarPinView.swift */; };
+		84F414402597276D007B47B5 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4143F2597276D007B47B5 /* PinView.swift */; };
+		84F41445259728AB007B47B5 /* PinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41444259728AB007B47B5 /* PinTextField.swift */; };
+		84F4144A25972B2D007B47B5 /* PinTecladoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4144925972B2D007B47B5 /* PinTecladoView.swift */; };
+		84F414502599FE01007B47B5 /* ClavesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4144F2599FE01007B47B5 /* ClavesView.swift */; };
+		84F414582599FE94007B47B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84F414572599FE94007B47B5 /* Localizable.strings */; };
+		84F4145D2599FEF7007B47B5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4145C2599FEF7007B47B5 /* Extensions.swift */; };
+		84F41466259A0230007B47B5 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41465259A0230007B47B5 /* Usuario.swift */; };
+		84F4146E259A02F3007B47B5 /* PinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4146D259A02F3007B47B5 /* PinViewModel.swift */; };
+		84F41473259A03D5007B47B5 /* BiometriaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41472259A03D5007B47B5 /* BiometriaHelper.swift */; };
+		84F41478259A0B37007B47B5 /* InfoBiometriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41477259A0B37007B47B5 /* InfoBiometriaView.swift */; };
+		84F41493259A1D3B007B47B5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 84F41492259A1D3B007B47B5 /* Lottie */; };
+		84F4149B259A1D7D007B47B5 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4149A259A1D7D007B47B5 /* LottieView.swift */; };
+		84F414A1259A1EA0007B47B5 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F414A0259A1EA0007B47B5 /* loading.json */; };
+		84F414A7259A204A007B47B5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414A6259A204A007B47B5 /* MenuView.swift */; };
+		84F414B0259A2489007B47B5 /* PinConfiguradoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414AF259A2489007B47B5 /* PinConfiguradoView.swift */; };
+		84F414B8259A24F4007B47B5 /* lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F414B7259A24F4007B47B5 /* lock.json */; };
+		84F414BE259A47A8007B47B5 /* SeguridadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414BD259A47A8007B47B5 /* SeguridadView.swift */; };
+		84F414C6259A49F7007B47B5 /* SeguridadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414C5259A49F7007B47B5 /* SeguridadViewModel.swift */; };
+		84F414CB259A7421007B47B5 /* unlock.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F414CA259A7421007B47B5 /* unlock.json */; };
+		84F414D0259A7513007B47B5 /* AddClaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414CF259A7513007B47B5 /* AddClaveView.swift */; };
+		84F414D5259A8E2E007B47B5 /* DetalleClaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414D4259A8E2E007B47B5 /* DetalleClaveView.swift */; };
+		84F414DB259AFDA3007B47B5 /* TofyKeys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F414D9259AFDA3007B47B5 /* TofyKeys.xcdatamodeld */; };
+		84F414E0259AFEBC007B47B5 /* ClavesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414DF259AFEBC007B47B5 /* ClavesManager.swift */; };
+		84F414F0259B68C7007B47B5 /* ClavesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414EF259B68C7007B47B5 /* ClavesViewModel.swift */; };
+		84F414F5259B7184007B47B5 /* EliminarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414F4259B7184007B47B5 /* EliminarView.swift */; };
+		84FA0AA2257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
+		84FA0AA3257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
+		84FA0AA4257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
+		84FA0AAC257A62700013B1CF /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AAB257A62700013B1CF /* Colores.swift */; };
+		84FA0AAD257A62700013B1CF /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AAB257A62700013B1CF /* Colores.swift */; };
+		84FA0AAE257A62700013B1CF /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AAB257A62700013B1CF /* Colores.swift */; };
+		84FA0AB3257A675D0013B1CF /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AB2257A675D0013B1CF /* Modifiers.swift */; };
+		84FA0AB4257A675D0013B1CF /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AB2257A675D0013B1CF /* Modifiers.swift */; };
+		84FA0AB5257A675D0013B1CF /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AB2257A675D0013B1CF /* Modifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +83,6 @@
 /* Begin PBXFileReference section */
 		84D3EC492577F6DF006A7613 /* Tofy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tofy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D3EC4C2577F6DF006A7613 /* TofyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TofyApp.swift; sourceTree = "<group>"; };
-		84D3EC4E2577F6DF006A7613 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84D3EC502577F6E1006A7613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D3EC532577F6E1006A7613 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84D3EC552577F6E1006A7613 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -49,6 +94,42 @@
 		84D3EC6A2577F6E1006A7613 /* TofyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TofyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D3EC6E2577F6E1006A7613 /* TofyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TofyUITests.swift; sourceTree = "<group>"; };
 		84D3EC702577F6E1006A7613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D3EC802577F8A2006A7613 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		84D3EC8A2577F8AD006A7613 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		84F41406259102CE007B47B5 /* Botones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Botones.swift; sourceTree = "<group>"; };
+		84F41414259400CB007B47B5 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		84F4141D2594FE05007B47B5 /* RegistroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroView.swift; sourceTree = "<group>"; };
+		84F414232594FE3D007B47B5 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		84F4142B259502C6007B47B5 /* RegistroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewModel.swift; sourceTree = "<group>"; };
+		84F414302597251E007B47B5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		84F414362597266A007B47B5 /* ConfigurarPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurarPinView.swift; sourceTree = "<group>"; };
+		84F4143F2597276D007B47B5 /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		84F41444259728AB007B47B5 /* PinTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTextField.swift; sourceTree = "<group>"; };
+		84F4144925972B2D007B47B5 /* PinTecladoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTecladoView.swift; sourceTree = "<group>"; };
+		84F4144F2599FE01007B47B5 /* ClavesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClavesView.swift; sourceTree = "<group>"; };
+		84F414572599FE94007B47B5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		84F4145C2599FEF7007B47B5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		84F41465259A0230007B47B5 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		84F4146D259A02F3007B47B5 /* PinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewModel.swift; sourceTree = "<group>"; };
+		84F41472259A03D5007B47B5 /* BiometriaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometriaHelper.swift; sourceTree = "<group>"; };
+		84F41477259A0B37007B47B5 /* InfoBiometriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBiometriaView.swift; sourceTree = "<group>"; };
+		84F4149A259A1D7D007B47B5 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		84F414A0259A1EA0007B47B5 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		84F414A6259A204A007B47B5 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		84F414AF259A2489007B47B5 /* PinConfiguradoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinConfiguradoView.swift; sourceTree = "<group>"; };
+		84F414B7259A24F4007B47B5 /* lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lock.json; sourceTree = "<group>"; };
+		84F414BD259A47A8007B47B5 /* SeguridadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguridadView.swift; sourceTree = "<group>"; };
+		84F414C5259A49F7007B47B5 /* SeguridadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguridadViewModel.swift; sourceTree = "<group>"; };
+		84F414CA259A7421007B47B5 /* unlock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = unlock.json; sourceTree = "<group>"; };
+		84F414CF259A7513007B47B5 /* AddClaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClaveView.swift; sourceTree = "<group>"; };
+		84F414D4259A8E2E007B47B5 /* DetalleClaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleClaveView.swift; sourceTree = "<group>"; };
+		84F414DA259AFDA3007B47B5 /* TofyKeys.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TofyKeys.xcdatamodel; sourceTree = "<group>"; };
+		84F414DF259AFEBC007B47B5 /* ClavesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClavesManager.swift; sourceTree = "<group>"; };
+		84F414EF259B68C7007B47B5 /* ClavesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClavesViewModel.swift; sourceTree = "<group>"; };
+		84F414F4259B7184007B47B5 /* EliminarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliminarView.swift; sourceTree = "<group>"; };
+		84FA0AA1257A611F0013B1CF /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		84FA0AAB257A62700013B1CF /* Colores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colores.swift; sourceTree = "<group>"; };
+		84FA0AB2257A675D0013B1CF /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F41493259A1D3B007B47B5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +181,20 @@
 		84D3EC4B2577F6DF006A7613 /* Tofy */ = {
 			isa = PBXGroup;
 			children = (
+				84F414A5259A2035007B47B5 /* Menu */,
+				84F41464259A01A2007B47B5 /* Data */,
+				84F4144E2599FDF4007B47B5 /* Claves */,
+				84F414222594FE22007B47B5 /* Componentes */,
+				84F41413259400B6007B47B5 /* API */,
+				84FA0AA0257A60FF0013B1CF /* Helper */,
+				84D3EC7F2577F88E006A7613 /* Login */,
 				84D3EC4C2577F6DF006A7613 /* TofyApp.swift */,
-				84D3EC4E2577F6DF006A7613 /* ContentView.swift */,
 				84D3EC502577F6E1006A7613 /* Assets.xcassets */,
 				84D3EC552577F6E1006A7613 /* Persistence.swift */,
 				84D3EC5A2577F6E1006A7613 /* Info.plist */,
 				84D3EC572577F6E1006A7613 /* Tofy.xcdatamodeld */,
 				84D3EC522577F6E1006A7613 /* Preview Content */,
+				84F414D9259AFDA3007B47B5 /* TofyKeys.xcdatamodeld */,
 			);
 			path = Tofy;
 			sourceTree = "<group>";
@@ -136,6 +225,138 @@
 			path = TofyUITests;
 			sourceTree = "<group>";
 		};
+		84D3EC7F2577F88E006A7613 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84F414AE259A2472007B47B5 /* PinConfigurado */,
+				84F4143E2597275E007B47B5 /* Pin */,
+				84F4143525972653007B47B5 /* ConfigurarPin */,
+				84F4141C2594FDF0007B47B5 /* Registro */,
+				84D3EC802577F8A2006A7613 /* LoginView.swift */,
+				84D3EC8A2577F8AD006A7613 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84F41413259400B6007B47B5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				84F41414259400CB007B47B5 /* ApiManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		84F4141C2594FDF0007B47B5 /* Registro */ = {
+			isa = PBXGroup;
+			children = (
+				84F4141D2594FE05007B47B5 /* RegistroView.swift */,
+				84F4142B259502C6007B47B5 /* RegistroViewModel.swift */,
+			);
+			path = Registro;
+			sourceTree = "<group>";
+		};
+		84F414222594FE22007B47B5 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				84F414232594FE3D007B47B5 /* InfoView.swift */,
+				84F41444259728AB007B47B5 /* PinTextField.swift */,
+				84F4144925972B2D007B47B5 /* PinTecladoView.swift */,
+				84F41477259A0B37007B47B5 /* InfoBiometriaView.swift */,
+				84F414CF259A7513007B47B5 /* AddClaveView.swift */,
+				84F414D4259A8E2E007B47B5 /* DetalleClaveView.swift */,
+				84F414F4259B7184007B47B5 /* EliminarView.swift */,
+			);
+			path = Componentes;
+			sourceTree = "<group>";
+		};
+		84F4143525972653007B47B5 /* ConfigurarPin */ = {
+			isa = PBXGroup;
+			children = (
+				84F414362597266A007B47B5 /* ConfigurarPinView.swift */,
+			);
+			path = ConfigurarPin;
+			sourceTree = "<group>";
+		};
+		84F4143E2597275E007B47B5 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				84F4143F2597276D007B47B5 /* PinView.swift */,
+				84F4146D259A02F3007B47B5 /* PinViewModel.swift */,
+			);
+			path = Pin;
+			sourceTree = "<group>";
+		};
+		84F4144E2599FDF4007B47B5 /* Claves */ = {
+			isa = PBXGroup;
+			children = (
+				84F4144F2599FE01007B47B5 /* ClavesView.swift */,
+				84F414EF259B68C7007B47B5 /* ClavesViewModel.swift */,
+			);
+			path = Claves;
+			sourceTree = "<group>";
+		};
+		84F41464259A01A2007B47B5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84F41465259A0230007B47B5 /* Usuario.swift */,
+				84F414DF259AFEBC007B47B5 /* ClavesManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		84F4149F259A1E84007B47B5 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				84F414CA259A7421007B47B5 /* unlock.json */,
+				84F414B7259A24F4007B47B5 /* lock.json */,
+				84F414A0259A1EA0007B47B5 /* loading.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		84F414A5259A2035007B47B5 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				84F414BC259A479B007B47B5 /* Seguridad */,
+				84F414A6259A204A007B47B5 /* MenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		84F414AE259A2472007B47B5 /* PinConfigurado */ = {
+			isa = PBXGroup;
+			children = (
+				84F414AF259A2489007B47B5 /* PinConfiguradoView.swift */,
+			);
+			path = PinConfigurado;
+			sourceTree = "<group>";
+		};
+		84F414BC259A479B007B47B5 /* Seguridad */ = {
+			isa = PBXGroup;
+			children = (
+				84F414BD259A47A8007B47B5 /* SeguridadView.swift */,
+				84F414C5259A49F7007B47B5 /* SeguridadViewModel.swift */,
+			);
+			path = Seguridad;
+			sourceTree = "<group>";
+		};
+		84FA0AA0257A60FF0013B1CF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				84F4149F259A1E84007B47B5 /* LottieFiles */,
+				84FA0AA1257A611F0013B1CF /* TextView.swift */,
+				84FA0AAB257A62700013B1CF /* Colores.swift */,
+				84FA0AB2257A675D0013B1CF /* Modifiers.swift */,
+				84F41406259102CE007B47B5 /* Botones.swift */,
+				84F414302597251E007B47B5 /* BaseView.swift */,
+				84F414572599FE94007B47B5 /* Localizable.strings */,
+				84F4145C2599FEF7007B47B5 /* Extensions.swift */,
+				84F41472259A03D5007B47B5 /* BiometriaHelper.swift */,
+				84F4149A259A1D7D007B47B5 /* LottieView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +373,9 @@
 			dependencies = (
 			);
 			name = Tofy;
+			packageProductDependencies = (
+				84F41492259A1D3B007B47B5 /* Lottie */,
+			);
 			productName = Tofy;
 			productReference = 84D3EC492577F6DF006A7613 /* Tofy.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +447,9 @@
 				Base,
 			);
 			mainGroup = 84D3EC402577F6DF006A7613;
+			packageReferences = (
+				84F41491259A1D3B007B47B5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 84D3EC4A2577F6DF006A7613 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,6 +467,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D3EC542577F6E1006A7613 /* Preview Assets.xcassets in Resources */,
+				84F414582599FE94007B47B5 /* Localizable.strings in Resources */,
+				84F414B8259A24F4007B47B5 /* lock.json in Resources */,
+				84F414CB259A7421007B47B5 /* unlock.json in Resources */,
+				84F414A1259A1EA0007B47B5 /* loading.json in Resources */,
 				84D3EC512577F6E1006A7613 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +497,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D3EC562577F6E1006A7613 /* Persistence.swift in Sources */,
-				84D3EC4F2577F6DF006A7613 /* ContentView.swift in Sources */,
+				84F4144A25972B2D007B47B5 /* PinTecladoView.swift in Sources */,
+				84F4149B259A1D7D007B47B5 /* LottieView.swift in Sources */,
+				84F414F5259B7184007B47B5 /* EliminarView.swift in Sources */,
+				84F41466259A0230007B47B5 /* Usuario.swift in Sources */,
+				84F41407259102CE007B47B5 /* Botones.swift in Sources */,
+				84F4146E259A02F3007B47B5 /* PinViewModel.swift in Sources */,
+				84F414C6259A49F7007B47B5 /* SeguridadViewModel.swift in Sources */,
+				84F41478259A0B37007B47B5 /* InfoBiometriaView.swift in Sources */,
+				84F414A7259A204A007B47B5 /* MenuView.swift in Sources */,
+				84F41473259A03D5007B47B5 /* BiometriaHelper.swift in Sources */,
+				84F4141E2594FE05007B47B5 /* RegistroView.swift in Sources */,
+				84F414DB259AFDA3007B47B5 /* TofyKeys.xcdatamodeld in Sources */,
+				84F414F0259B68C7007B47B5 /* ClavesViewModel.swift in Sources */,
+				84F414502599FE01007B47B5 /* ClavesView.swift in Sources */,
+				84F41415259400CB007B47B5 /* ApiManager.swift in Sources */,
+				84F414372597266A007B47B5 /* ConfigurarPinView.swift in Sources */,
+				84F41445259728AB007B47B5 /* PinTextField.swift in Sources */,
+				84F4142C259502C6007B47B5 /* RegistroViewModel.swift in Sources */,
+				84F414242594FE3D007B47B5 /* InfoView.swift in Sources */,
+				84FA0AAC257A62700013B1CF /* Colores.swift in Sources */,
+				84D3EC8B2577F8AD006A7613 /* LoginViewModel.swift in Sources */,
 				84D3EC4D2577F6DF006A7613 /* TofyApp.swift in Sources */,
+				84F414B0259A2489007B47B5 /* PinConfiguradoView.swift in Sources */,
+				84F414402597276D007B47B5 /* PinView.swift in Sources */,
+				84FA0AB3257A675D0013B1CF /* Modifiers.swift in Sources */,
+				84F4145D2599FEF7007B47B5 /* Extensions.swift in Sources */,
+				84F414D0259A7513007B47B5 /* AddClaveView.swift in Sources */,
+				84F414D5259A8E2E007B47B5 /* DetalleClaveView.swift in Sources */,
+				84F414E0259AFEBC007B47B5 /* ClavesManager.swift in Sources */,
+				84FA0AA2257A611F0013B1CF /* TextView.swift in Sources */,
+				84F414312597251E007B47B5 /* BaseView.swift in Sources */,
+				84F414BE259A47A8007B47B5 /* SeguridadView.swift in Sources */,
+				84D3EC812577F8A2006A7613 /* LoginView.swift in Sources */,
 				84D3EC592577F6E1006A7613 /* Tofy.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +538,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FA0AAD257A62700013B1CF /* Colores.swift in Sources */,
+				84D3EC822577F8A2006A7613 /* LoginView.swift in Sources */,
+				84FA0AA3257A611F0013B1CF /* TextView.swift in Sources */,
 				84D3EC642577F6E1006A7613 /* TofyTests.swift in Sources */,
+				84FA0AB4257A675D0013B1CF /* Modifiers.swift in Sources */,
+				84D3EC8C2577F8AD006A7613 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +551,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FA0AAE257A62700013B1CF /* Colores.swift in Sources */,
+				84D3EC832577F8A2006A7613 /* LoginView.swift in Sources */,
+				84FA0AA4257A611F0013B1CF /* TextView.swift in Sources */,
 				84D3EC6F2577F6E1006A7613 /* TofyUITests.swift in Sources */,
+				84FA0AB5257A675D0013B1CF /* Modifiers.swift in Sources */,
+				84D3EC8D2577F8AD006A7613 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +610,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -399,6 +672,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -583,6 +857,25 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		84F41491259A1D3B007B47B5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84F41492259A1D3B007B47B5 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84F41491259A1D3B007B47B5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+
 /* Begin XCVersionGroup section */
 		84D3EC572577F6E1006A7613 /* Tofy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
@@ -591,6 +884,16 @@
 			);
 			currentVersion = 84D3EC582577F6E1006A7613 /* Tofy.xcdatamodel */;
 			path = Tofy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		84F414D9259AFDA3007B47B5 /* TofyKeys.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84F414DA259AFDA3007B47B5 /* TofyKeys.xcdatamodel */,
+			);
+			currentVersion = 84F414DA259AFDA3007B47B5 /* TofyKeys.xcdatamodel */;
+			path = TofyKeys.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
