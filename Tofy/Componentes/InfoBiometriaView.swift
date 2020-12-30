@@ -38,6 +38,5 @@ struct InfoBiometriaView: View {
         .background(Color.blanco)
         .cornerRadius(3)
         .shadow(radius: 3)
-        //.overlay(RoundedRectangle(cornerRadius: 3.0).stroke(Color.principal, lineWidth: 1))
     }
 }

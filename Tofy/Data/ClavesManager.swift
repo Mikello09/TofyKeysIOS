@@ -61,6 +61,20 @@ class ClavesManager{
         eliminarClaveDeServidor(clave: clave)
     }
     
+    func eliminarTodasLasClaves() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Clave")
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let results = try PersistenceController.shared.container.viewContext.fetch(fetchRequest)
+            for object in results {
+                guard let objectData = object as? NSManagedObject else {continue}
+                PersistenceController.shared.container.viewContext.delete(objectData)
+            }
+        } catch let error {
+            print("Detele all data in \("TofyKeys") error :", error)
+        }
+    }
+    
     func guardarClaveEnPersistencia(){
         let context = PersistenceController.shared.container.viewContext
         do{

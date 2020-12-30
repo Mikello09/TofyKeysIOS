@@ -19,14 +19,19 @@ struct PinTecladoView: View {
             Color.grisTransparente
             VStack{
                 VStack{
-                    Text("Introduce tu código PIN")
+                    Image("pin_icon")
+                        .resizable()
+                        .frame(width: 48, height: 48)
+                        .padding(8)
+                    Text("introduceCodigoPin".localized)
                         .titulo(color: .negro)
+                        .padding(.bottom, 8)
                     VStack{
                         Text(pinValor)
                             .titulo(color: .principal)
                     }
                     .frame(maxWidth: .infinity)
-                    .frame(maxHeight: 48)
+                    .frame(maxHeight: 30)
                     .padding()
                     .background(Color.blanco)
                     .cornerRadius(3)
@@ -57,9 +62,9 @@ struct PinTecladoView: View {
                         }
                         .frame(height: 80)
                         HStack{
-                            DigitoTeclado("")
+                            EmptyView()
                             DigitoTeclado("0")
-                            DigitoTeclado("")
+                            EmptyView()
                         }
                         .frame(height: 80)
                     }
@@ -79,7 +84,7 @@ struct PinTecladoView: View {
                 usuarioAutorizado()
             } else {
                 pinValor = ""
-                error = "Pin incorrecto"
+                error = "pinIncorrecto".localized
             }
         }
     }
@@ -90,13 +95,12 @@ struct PinTecladoView: View {
                 Text(digito)
                     .titulo(color: .negro)
             }
-            .frame(width: 48)
-            .frame(height: 48)
+            .frame(width: 36)
+            .frame(height: 36)
             .padding()
             .background(Color.blanco)
             .cornerRadius(3)
             .shadow(radius: 3)
-            .overlay(RoundedRectangle(cornerRadius: 3.0).stroke(Color.principal, lineWidth: 1))
             .onTapGesture {
                 error = ""
                 self.pinValor.append(digito)

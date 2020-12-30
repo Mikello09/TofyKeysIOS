@@ -1,40 +1,36 @@
 //
-//  EliminarView.swift
+//  CerrarSesionView.swift
 //  Tofy
 //
-//  Created by usuario on 29/12/20.
+//  Created by usuario on 30/12/20.
 //
 
 import SwiftUI
 
-struct EliminarView: View {
+struct CerrarSesionView: View {
     
-    @Binding var showEliminarClave: Bool
-    var clave: Clave
-    var eliminarClave: () -> ()
+    var cerrarSesion: ()->()
+    @Binding var showCerrarSesion: Bool
     
     var body: some View {
         ZStack{
             Color.grisTransparente
-                .onTapGesture {
-                    showEliminarClave = false
-                }
             VStack{
                 VStack{
-                    Text("\("eliminarClaveTexto".localized) \(clave.titulo ?? "")?")
+                    Text("cerrrarSesionTexto".localized)
                         .titulo(color: .negro)
                         .multilineTextAlignment(.center)
                         .lineLimit(nil)
                         .padding()
                     HStack{
                         Button(action: {
-                            eliminarClave()
-                            showEliminarClave = false
+                            cerrarSesion()
+                            showCerrarSesion = false
                         }){EmptyView()}.buttonStyle(BotonConColor(color: .rojo, texto: "si".localized))
                         .frame(maxWidth: .infinity)
                         .padding()
                         Button(action: {
-                            showEliminarClave = false
+                            showCerrarSesion = false
                         }){EmptyView()}.buttonStyle(BotonConColor(color: .verde, texto: "no".localized))
                         .frame(maxWidth: .infinity)
                         .padding()

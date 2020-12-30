@@ -38,7 +38,7 @@ struct BotonPrincipal: ButtonStyle {
             
             Text(text)
                 .foregroundColor(.blanco)
-                .font(.custom("SourceSansPro-SemiBold", size: 18.0))
+                .font(.system(size: 18, weight: .bold, design: .default))
         }.frame(height: BUTTON_HEIGHT)
     }
 }

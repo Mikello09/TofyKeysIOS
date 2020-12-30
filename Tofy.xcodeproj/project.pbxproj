@@ -52,6 +52,8 @@
 		84F414E0259AFEBC007B47B5 /* ClavesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414DF259AFEBC007B47B5 /* ClavesManager.swift */; };
 		84F414F0259B68C7007B47B5 /* ClavesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414EF259B68C7007B47B5 /* ClavesViewModel.swift */; };
 		84F414F5259B7184007B47B5 /* EliminarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414F4259B7184007B47B5 /* EliminarView.swift */; };
+		84F414FD259D2FE5007B47B5 /* CerrarSesionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414FC259D2FE5007B47B5 /* CerrarSesionView.swift */; };
+		84F41502259D341F007B47B5 /* TipoSeguridadCambiadoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41501259D341F007B47B5 /* TipoSeguridadCambiadoView.swift */; };
 		84FA0AA2257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
 		84FA0AA3257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
 		84FA0AA4257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
@@ -127,6 +129,8 @@
 		84F414DF259AFEBC007B47B5 /* ClavesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClavesManager.swift; sourceTree = "<group>"; };
 		84F414EF259B68C7007B47B5 /* ClavesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClavesViewModel.swift; sourceTree = "<group>"; };
 		84F414F4259B7184007B47B5 /* EliminarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliminarView.swift; sourceTree = "<group>"; };
+		84F414FC259D2FE5007B47B5 /* CerrarSesionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerrarSesionView.swift; sourceTree = "<group>"; };
+		84F41501259D341F007B47B5 /* TipoSeguridadCambiadoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoSeguridadCambiadoView.swift; sourceTree = "<group>"; };
 		84FA0AA1257A611F0013B1CF /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		84FA0AAB257A62700013B1CF /* Colores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colores.swift; sourceTree = "<group>"; };
 		84FA0AB2257A675D0013B1CF /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 				84F414CF259A7513007B47B5 /* AddClaveView.swift */,
 				84F414D4259A8E2E007B47B5 /* DetalleClaveView.swift */,
 				84F414F4259B7184007B47B5 /* EliminarView.swift */,
+				84F414FC259D2FE5007B47B5 /* CerrarSesionView.swift */,
+				84F41501259D341F007B47B5 /* TipoSeguridadCambiadoView.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				84F414DB259AFDA3007B47B5 /* TofyKeys.xcdatamodeld in Sources */,
 				84F414F0259B68C7007B47B5 /* ClavesViewModel.swift in Sources */,
 				84F414502599FE01007B47B5 /* ClavesView.swift in Sources */,
+				84F41502259D341F007B47B5 /* TipoSeguridadCambiadoView.swift in Sources */,
 				84F41415259400CB007B47B5 /* ApiManager.swift in Sources */,
 				84F414372597266A007B47B5 /* ConfigurarPinView.swift in Sources */,
 				84F41445259728AB007B47B5 /* PinTextField.swift in Sources */,
@@ -528,6 +535,7 @@
 				84F414E0259AFEBC007B47B5 /* ClavesManager.swift in Sources */,
 				84FA0AA2257A611F0013B1CF /* TextView.swift in Sources */,
 				84F414312597251E007B47B5 /* BaseView.swift in Sources */,
+				84F414FD259D2FE5007B47B5 /* CerrarSesionView.swift in Sources */,
 				84F414BE259A47A8007B47B5 /* SeguridadView.swift in Sources */,
 				84D3EC812577F8A2006A7613 /* LoginView.swift in Sources */,
 				84D3EC592577F6E1006A7613 /* Tofy.xcdatamodeld in Sources */,

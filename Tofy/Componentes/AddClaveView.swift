@@ -33,7 +33,7 @@ struct AddClaveView: View {
                 }
             VStack{
                 VStack{
-                    Text("Añadir Clave")
+                    Text("anadirClave".localized)
                         .titulo(color: .negro)
                     TextField("email".localized, text: $titulo)
                         .modifier(CustomEditText(imagen: "titulo_icon"))
@@ -42,12 +42,12 @@ struct AddClaveView: View {
                         Button(action: {
                             valorSeleccionado = true
                             usuarioContrasenaSeleccionado = false
-                        }){EmptyView()}.buttonStyle(BotonCambiante(texto: "Solo usuario", seleccionado: $valorSeleccionado))
+                        }){EmptyView()}.buttonStyle(BotonCambiante(texto: "soloUsuario".localized, seleccionado: $valorSeleccionado))
                         .padding(4)
                         Button(action: {
                             valorSeleccionado = false
                             usuarioContrasenaSeleccionado = true
-                        }){EmptyView()}.buttonStyle(BotonCambiante(texto: "Usuario\n + \nContraseña", seleccionado: $usuarioContrasenaSeleccionado))
+                        }){EmptyView()}.buttonStyle(BotonCambiante(texto: "usuarioYcontrasena".localized, seleccionado: $usuarioContrasenaSeleccionado))
                         .padding(4)
                     }
                     .padding()

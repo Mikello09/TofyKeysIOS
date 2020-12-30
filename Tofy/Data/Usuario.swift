@@ -11,6 +11,28 @@ enum TipoSeguridad: String, Codable{
     case ninguna = "Ninguna"
     case pin = "Pin"
     case biometria = "Biometria"
+    
+    func mensaje() -> String{
+        switch self{
+        case .ninguna:
+            return "seguridadNingunaMensaje".localized
+        case .pin:
+            return "seguridadPinMensaje".localized
+        case .biometria:
+            return "seguridadBiometriaMensaje".localized
+        }
+    }
+    
+    func imagen() -> String{
+        switch self{
+        case .ninguna:
+            return ""
+        case .pin:
+            return "pin_icon"
+        case .biometria:
+            return "huella_icon"
+        }
+    }
 }
 
 struct Usuario: Codable{

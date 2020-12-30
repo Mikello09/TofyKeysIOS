@@ -34,3 +34,16 @@
 "editar" = "Editar";
 "actualizar" = "Actualizar";
 "cerrarSesion" = "Cerrar Sesión";
+"aceptar" = "Acpetar";
+"si" = "SÍ";
+"no" = "NO";
+"cerrrarSesionTexto" = "¿Estás segur@ de cerrar sesión?\nPerderás todas las claves no actualizadas";
+"eliminarClaveTexto" = "¿Estás segur@ de eliminar la clave";
+"seguridadNingunaMensaje" = "Seguridad de Tofy Keys desactivada";
+"seguridadPinMensaje" = "Seguridad de Tofy Keys mediante número PIN activada";
+"seguridadBiometriaMensaje" = "Seguridad de Tofy Keys mediante número PIN activada";
+"anadirClave" = "Añadir Clave";
+"soloUsuario" = "Solo usuario";
+"usaurioYcontrasena" = "Usuario\n + \nContraseña";
+"introduceCodigoPin" = "Introduce tu código PIN";
+"pinIncorrecto" = "Pin incorrecto";

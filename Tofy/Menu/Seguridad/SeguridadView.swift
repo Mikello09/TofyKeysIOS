@@ -15,125 +15,136 @@ struct SeguridadView: View {
     @State var goToConfigurarPin: Bool = false
     @State var goToClaves: Bool = false
     @State var tipoSeguridad: TipoSeguridad = .ninguna
+    @State var showCambioSeguridad: Bool = false
     
     var body: some View {
         BaseView(showLoader: $showLoader,
                  content:
-                    VStack{
+                    ZStack{
                         VStack{
-                            HStack{
-                                ZStack{
-                                    Circle()
-                                        .fill(Color.gris)
-                                        .frame(width: 24, height: 24)
-                                        .padding()
-                                    if tipoSeguridad == .ninguna{
+                            VStack{
+                                HStack{
+                                    ZStack{
                                         Circle()
-                                            .fill(Color.principal)
-                                            .frame(width: 16, height: 16)
+                                            .fill(Color.gris)
+                                            .frame(width: 24, height: 24)
                                             .padding()
+                                        if tipoSeguridad == .ninguna{
+                                            Circle()
+                                                .fill(Color.principal)
+                                                .frame(width: 16, height: 16)
+                                                .padding()
+                                        }
                                     }
+                                    Text("ninguna".localized)
+                                        .info()
+                                    Spacer()
                                 }
-                                Text("ninguna".localized)
-                                    .info()
-                                Spacer()
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 50)
+                                .background(Color.blanco)
+                                .cornerRadius(3)
+                                .shadow(radius: 3)
+                                .onTapGesture {
+                                    tipoSeguridad = .ninguna
+                                }
                             }
                             .padding()
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-                            .background(Color.blanco)
-                            .cornerRadius(3)
-                            .shadow(radius: 3)
-                            .onTapGesture {
-                                tipoSeguridad = .ninguna
-                            }
-                        }
-                        .padding()
-                        VStack{
-                            HStack{
-                                ZStack{
-                                    Circle()
-                                        .fill(Color.gris)
-                                        .frame(width: 24, height: 24)
-                                        .padding()
-                                    if tipoSeguridad == .pin{
+                            VStack{
+                                HStack{
+                                    ZStack{
                                         Circle()
-                                            .fill(Color.principal)
-                                            .frame(width: 16, height: 16)
+                                            .fill(Color.gris)
+                                            .frame(width: 24, height: 24)
                                             .padding()
+                                        if tipoSeguridad == .pin{
+                                            Circle()
+                                                .fill(Color.principal)
+                                                .frame(width: 16, height: 16)
+                                                .padding()
+                                        }
                                     }
+                                    Text("pin".localized)
+                                        .info()
+                                    Spacer()
+                                    Image("pin_icon")
+                                        .resizable()
+                                        .frame(width: 32, height: 32)
+                                        .padding()
                                 }
-                                Text("pin".localized)
-                                    .info()
-                                Spacer()
-                                Image("pin_icon")
-                                    .resizable()
-                                    .frame(width: 32, height: 32)
-                                    .padding()
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 50)
+                                .background(Color.blanco)
+                                .cornerRadius(3)
+                                .shadow(radius: 3)
+                                .onTapGesture {
+                                    tipoSeguridad = .pin
+                                }
+                            }
+                            .padding([.leading, .trailing])
+                            VStack{
+                                HStack{
+                                    ZStack{
+                                        Circle()
+                                            .fill(Color.gris)
+                                            .frame(width: 24, height: 24)
+                                            .padding()
+                                        if tipoSeguridad == .biometria{
+                                            Circle()
+                                                .fill(Color.principal)
+                                                .frame(width: 16, height: 16)
+                                                .padding()
+                                        }
+                                    }
+                                    Text("biometria".localized)
+                                        .info()
+                                    Spacer()
+                                    Image("huella_icon")
+                                        .resizable()
+                                        .frame(width: 32, height: 32)
+                                        .padding()
+                                }
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 50)
+                                .background(Color.blanco)
+                                .cornerRadius(3)
+                                .shadow(radius: 3)
+                                .onTapGesture {
+                                    tipoSeguridad = .biometria
+                                }
                             }
                             .padding()
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-                            .background(Color.blanco)
-                            .cornerRadius(3)
-                            .shadow(radius: 3)
-                            .onTapGesture {
-                                tipoSeguridad = .pin
-                            }
-                        }
-                        .padding([.leading, .trailing])
-                        VStack{
-                            HStack{
-                                ZStack{
-                                    Circle()
-                                        .fill(Color.gris)
-                                        .frame(width: 24, height: 24)
-                                        .padding()
-                                    if tipoSeguridad == .biometria{
-                                        Circle()
-                                            .fill(Color.principal)
-                                            .frame(width: 16, height: 16)
-                                            .padding()
+                            Spacer()
+                            if isBotonVisible(){
+                                Button(action: {
+                                    switch tipoSeguridad{
+                                    case .ninguna:
+                                        guardarTipoSeguridad(tipo: .ninguna)
+                                        showCambioSeguridad = true
+                                    case .pin:
+                                        goToConfigurarPin = true
+                                    case .biometria:
+                                        guardarTipoSeguridad(tipo: .biometria)
+                                        showCambioSeguridad = true
                                     }
-                                }
-                                Text("biometria".localized)
-                                    .info()
-                                Spacer()
-                                Image("huella_icon")
-                                    .resizable()
-                                    .frame(width: 32, height: 32)
-                                    .padding()
+                                }){EmptyView()}.buttonStyle(BotonPrincipal(text: textoBoton(), enabled: true))
+                                .padding()
                             }
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-                            .background(Color.blanco)
-                            .cornerRadius(3)
-                            .shadow(radius: 3)
-                            .onTapGesture {
-                                tipoSeguridad = .biometria
+                            Group{
+                                NavigationLink(destination: PinView(), isActive: $goToConfigurarPin){EmptyView()}
+                                NavigationLink(destination: ClavesView().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext), isActive: $goToClaves){EmptyView()}
                             }
                         }
-                        .padding()
-                        Spacer()
-                        Button(action: {
-                            switch tipoSeguridad{
-                            case .ninguna:
-                                guardarTipoSeguridad(tipo: .ninguna)
-                                goToClaves = true
-                            case .pin:
-                                goToConfigurarPin = true
-                            case .biometria:
-                                guardarTipoSeguridad(tipo: .biometria)
-                                goToClaves = true
-                            }
-                        }){EmptyView()}.buttonStyle(BotonPrincipal(text: textoBoton(), enabled: true))
-                        .padding()
-                        Group{
-                            NavigationLink(destination: PinView(), isActive: $goToConfigurarPin){EmptyView()}
-                            NavigationLink(destination: ClavesView().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext), isActive: $goToClaves){EmptyView()}
+                        if showCambioSeguridad{
+                            TipoSeguridadCambiadoView(showTipoSeguridadCambiado: $showCambioSeguridad,
+                                                      aceptar: aceptar,
+                                                      tipoSeguridad: tipoSeguridad)
                         }
-                    },
+                    }
+                    ,
                  titulo: "Seguridad")
             .onAppear{
                 self.viewModel.obtenerTipoSeguridad()
@@ -153,6 +164,14 @@ struct SeguridadView: View {
         case .biometria:
             return "guardar".localized
         }
+    }
+    
+    func isBotonVisible() -> Bool{
+        return tipoSeguridad != getUsuario().tipoSeguridad
+    }
+    
+    func aceptar(){
+        goToClaves = true
     }
 }
 
