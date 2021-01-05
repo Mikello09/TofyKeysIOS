@@ -34,6 +34,7 @@ class LoginViewModel: ObservableObject{
     }
     
     func entrar(email: String, contrasena: String){
+        ClavesManager().eliminarTodasLasClaves()//vaciamos las claves actuales si las hay
         entrarCancelable = entrarLlamada(email: email, contrasena: contrasena)
             .sink(receiveCompletion: {
                 switch $0{

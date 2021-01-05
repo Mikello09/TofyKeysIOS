@@ -42,8 +42,7 @@ class ClavesManager{
         clave.valor = valor
         clave.sincronizado = false
         guardarClaveEnPersistencia()
-        //sincronizarClave(clave: clave)
-        eliminarClaveDeServidor(clave: clave)
+        sincronizarClave(clave: clave)
     }
     
     func actualizarUsuarioContrasena(clave: Clave, titulo: String, usuario: String, contrasena: String){
@@ -55,12 +54,6 @@ class ClavesManager{
         sincronizarClave(clave: clave)
     }
     
-    func eliminarClave(clave: Clave){
-        PersistenceController.shared.container.viewContext.delete(clave)
-        guardarClaveEnPersistencia()
-        eliminarClaveDeServidor(clave: clave)
-    }
-    
     func eliminarTodasLasClaves() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Clave")
         fetchRequest.returnsObjectsAsFaults = false
@@ -70,6 +63,7 @@ class ClavesManager{
                 guard let objectData = object as? NSManagedObject else {continue}
                 PersistenceController.shared.container.viewContext.delete(objectData)
             }
+            guardarClaveEnPersistencia()
         } catch let error {
             print("Detele all data in \("TofyKeys") error :", error)
         }
@@ -85,16 +79,9 @@ class ClavesManager{
         }
     }
     
-    func eliminarClaveDeServidor(clave: Clave){
-        cancellableEliminar = llamadaEliminarClave(clave: clave).sink(receiveCompletion: {
-            switch $0{
-            case .failure(let err):
-                print("")
-            case .finished:()
-            }
-        }, receiveValue: { response in
-            print("")
-        })
+    func eliminarClaveLocal(clave: Clave){
+        PersistenceController.shared.container.viewContext.delete(clave)
+        self.guardarClaveEnPersistencia()
     }
     
     func sincronizarClave(clave: Clave){
@@ -148,12 +135,6 @@ class ClavesManager{
             .eraseToAnyPublisher()
     }
     
-    func llamadaEliminarClave(clave: Clave) -> AnyPublisher<String, Error>{
-        return crearLlamada(url: eliminarClaveUrl,
-                            parametros: ["token":clave.token ?? ""])
-            .eraseToAnyPublisher()
-    }
-    
     func generarToken() -> String{
         let number = Int.random(in: 0..<100000)
         return "\(number)"
@@ -176,6 +157,10 @@ struct ClaveModel: Codable{
     var usuario: String
     var contrasena: String
     var fecha: String
+}
+
+struct EliminarRespuesta: Codable{
+    var result: String
 }
 
 

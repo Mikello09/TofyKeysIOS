@@ -15,6 +15,7 @@ struct SeguridadView: View {
     @State var goToConfigurarPin: Bool = false
     @State var goToClaves: Bool = false
     @State var tipoSeguridad: TipoSeguridad = .ninguna
+    @State var tipoBiometria: TipoBiometria = .ninguna
     @State var showCambioSeguridad: Bool = false
     
     var body: some View {
@@ -84,39 +85,41 @@ struct SeguridadView: View {
                                 }
                             }
                             .padding([.leading, .trailing])
-                            VStack{
-                                HStack{
-                                    ZStack{
-                                        Circle()
-                                            .fill(Color.gris)
-                                            .frame(width: 24, height: 24)
-                                            .padding()
-                                        if tipoSeguridad == .biometria{
+                            if tipoBiometria != .ninguna{
+                                VStack{
+                                    HStack{
+                                        ZStack{
                                             Circle()
-                                                .fill(Color.principal)
-                                                .frame(width: 16, height: 16)
+                                                .fill(Color.gris)
+                                                .frame(width: 24, height: 24)
                                                 .padding()
+                                            if tipoSeguridad == .biometria{
+                                                Circle()
+                                                    .fill(Color.principal)
+                                                    .frame(width: 16, height: 16)
+                                                    .padding()
+                                            }
                                         }
+                                        Text(tipoBiometria.titulo())
+                                            .info()
+                                        Spacer()
+                                        Image(tipoBiometria.icono())
+                                            .resizable()
+                                            .frame(width: 32, height: 32)
+                                            .padding()
                                     }
-                                    Text("biometria".localized)
-                                        .info()
-                                    Spacer()
-                                    Image("huella_icon")
-                                        .resizable()
-                                        .frame(width: 32, height: 32)
-                                        .padding()
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 50)
+                                    .background(Color.blanco)
+                                    .cornerRadius(3)
+                                    .shadow(radius: 3)
+                                    .onTapGesture {
+                                        tipoSeguridad = .biometria
+                                    }
                                 }
                                 .padding()
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 50)
-                                .background(Color.blanco)
-                                .cornerRadius(3)
-                                .shadow(radius: 3)
-                                .onTapGesture {
-                                    tipoSeguridad = .biometria
-                                }
                             }
-                            .padding()
                             Spacer()
                             if isBotonVisible(){
                                 Button(action: {
@@ -139,19 +142,26 @@ struct SeguridadView: View {
                             }
                         }
                         if showCambioSeguridad{
-                            TipoSeguridadCambiadoView(showTipoSeguridadCambiado: $showCambioSeguridad,
-                                                      aceptar: aceptar,
-                                                      tipoSeguridad: tipoSeguridad)
+                            InformacionPopUpView(showInformacionPopUp: $showCambioSeguridad,
+                                                 aceptar: aceptar,
+                                                 texto: tipoSeguridad.mensaje(tipoBiometria: tipoBiometria),
+                                                 imagen: tipoSeguridad.imagen(tipoBiometria: tipoBiometria))
                         }
                     }
                     ,
                  titulo: "Seguridad")
             .onAppear{
                 self.viewModel.obtenerTipoSeguridad()
+                self.viewModel.obtenerTipoBiometria()
             }
             .onReceive(self.viewModel.$tipoSeguridad){ value in
                 if let tipo = value{
                     tipoSeguridad = tipo
+                }
+            }
+            .onReceive(self.viewModel.$tipoBiometria){ value in
+                if let biometria = value{
+                    tipoBiometria = biometria
                 }
             }
     }

@@ -12,9 +12,20 @@ import Combine
 class SeguridadViewModel: ObservableObject{
     
     @Published var tipoSeguridad: TipoSeguridad?
+    @Published var tipoBiometria: TipoBiometria?
+    var cancellable: Cancellable?
+    
     
     func obtenerTipoSeguridad(){
         self.tipoSeguridad = getUsuario().tipoSeguridad
+    }
+    
+    func obtenerTipoBiometria(){
+        cancellable = BiometriaHelper.getTipoBiometria()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { tipo in
+                self.tipoBiometria = tipo
+            })
     }
     
 }

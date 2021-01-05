@@ -45,7 +45,6 @@
 		84F414B8259A24F4007B47B5 /* lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F414B7259A24F4007B47B5 /* lock.json */; };
 		84F414BE259A47A8007B47B5 /* SeguridadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414BD259A47A8007B47B5 /* SeguridadView.swift */; };
 		84F414C6259A49F7007B47B5 /* SeguridadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414C5259A49F7007B47B5 /* SeguridadViewModel.swift */; };
-		84F414CB259A7421007B47B5 /* unlock.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F414CA259A7421007B47B5 /* unlock.json */; };
 		84F414D0259A7513007B47B5 /* AddClaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414CF259A7513007B47B5 /* AddClaveView.swift */; };
 		84F414D5259A8E2E007B47B5 /* DetalleClaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414D4259A8E2E007B47B5 /* DetalleClaveView.swift */; };
 		84F414DB259AFDA3007B47B5 /* TofyKeys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F414D9259AFDA3007B47B5 /* TofyKeys.xcdatamodeld */; };
@@ -53,7 +52,9 @@
 		84F414F0259B68C7007B47B5 /* ClavesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414EF259B68C7007B47B5 /* ClavesViewModel.swift */; };
 		84F414F5259B7184007B47B5 /* EliminarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414F4259B7184007B47B5 /* EliminarView.swift */; };
 		84F414FD259D2FE5007B47B5 /* CerrarSesionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F414FC259D2FE5007B47B5 /* CerrarSesionView.swift */; };
-		84F41502259D341F007B47B5 /* TipoSeguridadCambiadoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41501259D341F007B47B5 /* TipoSeguridadCambiadoView.swift */; };
+		84F41502259D341F007B47B5 /* InformacionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41501259D341F007B47B5 /* InformacionPopUpView.swift */; };
+		84F41511259E339F007B47B5 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F41510259E339F007B47B5 /* AppInfoView.swift */; };
+		84F4152A25A0E80F007B47B5 /* unlock.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F4152925A0E80F007B47B5 /* unlock.json */; };
 		84FA0AA2257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
 		84FA0AA3257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
 		84FA0AA4257A611F0013B1CF /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0AA1257A611F0013B1CF /* TextView.swift */; };
@@ -122,7 +123,6 @@
 		84F414B7259A24F4007B47B5 /* lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lock.json; sourceTree = "<group>"; };
 		84F414BD259A47A8007B47B5 /* SeguridadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguridadView.swift; sourceTree = "<group>"; };
 		84F414C5259A49F7007B47B5 /* SeguridadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguridadViewModel.swift; sourceTree = "<group>"; };
-		84F414CA259A7421007B47B5 /* unlock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = unlock.json; sourceTree = "<group>"; };
 		84F414CF259A7513007B47B5 /* AddClaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClaveView.swift; sourceTree = "<group>"; };
 		84F414D4259A8E2E007B47B5 /* DetalleClaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleClaveView.swift; sourceTree = "<group>"; };
 		84F414DA259AFDA3007B47B5 /* TofyKeys.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TofyKeys.xcdatamodel; sourceTree = "<group>"; };
@@ -130,7 +130,9 @@
 		84F414EF259B68C7007B47B5 /* ClavesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClavesViewModel.swift; sourceTree = "<group>"; };
 		84F414F4259B7184007B47B5 /* EliminarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliminarView.swift; sourceTree = "<group>"; };
 		84F414FC259D2FE5007B47B5 /* CerrarSesionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerrarSesionView.swift; sourceTree = "<group>"; };
-		84F41501259D341F007B47B5 /* TipoSeguridadCambiadoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoSeguridadCambiadoView.swift; sourceTree = "<group>"; };
+		84F41501259D341F007B47B5 /* InformacionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionPopUpView.swift; sourceTree = "<group>"; };
+		84F41510259E339F007B47B5 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
+		84F4152925A0E80F007B47B5 /* unlock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = unlock.json; sourceTree = "<group>"; };
 		84FA0AA1257A611F0013B1CF /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		84FA0AAB257A62700013B1CF /* Colores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colores.swift; sourceTree = "<group>"; };
 		84FA0AB2257A675D0013B1CF /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
@@ -270,7 +272,7 @@
 				84F414D4259A8E2E007B47B5 /* DetalleClaveView.swift */,
 				84F414F4259B7184007B47B5 /* EliminarView.swift */,
 				84F414FC259D2FE5007B47B5 /* CerrarSesionView.swift */,
-				84F41501259D341F007B47B5 /* TipoSeguridadCambiadoView.swift */,
+				84F41501259D341F007B47B5 /* InformacionPopUpView.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -313,7 +315,7 @@
 		84F4149F259A1E84007B47B5 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
-				84F414CA259A7421007B47B5 /* unlock.json */,
+				84F4152925A0E80F007B47B5 /* unlock.json */,
 				84F414B7259A24F4007B47B5 /* lock.json */,
 				84F414A0259A1EA0007B47B5 /* loading.json */,
 			);
@@ -323,6 +325,7 @@
 		84F414A5259A2035007B47B5 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				84F4150F259E3393007B47B5 /* AppInfo */,
 				84F414BC259A479B007B47B5 /* Seguridad */,
 				84F414A6259A204A007B47B5 /* MenuView.swift */,
 			);
@@ -344,6 +347,14 @@
 				84F414C5259A49F7007B47B5 /* SeguridadViewModel.swift */,
 			);
 			path = Seguridad;
+			sourceTree = "<group>";
+		};
+		84F4150F259E3393007B47B5 /* AppInfo */ = {
+			isa = PBXGroup;
+			children = (
+				84F41510259E339F007B47B5 /* AppInfoView.swift */,
+			);
+			path = AppInfo;
 			sourceTree = "<group>";
 		};
 		84FA0AA0257A60FF0013B1CF /* Helper */ = {
@@ -475,8 +486,8 @@
 				84D3EC542577F6E1006A7613 /* Preview Assets.xcassets in Resources */,
 				84F414582599FE94007B47B5 /* Localizable.strings in Resources */,
 				84F414B8259A24F4007B47B5 /* lock.json in Resources */,
-				84F414CB259A7421007B47B5 /* unlock.json in Resources */,
 				84F414A1259A1EA0007B47B5 /* loading.json in Resources */,
+				84F4152A25A0E80F007B47B5 /* unlock.json in Resources */,
 				84D3EC512577F6E1006A7613 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +528,7 @@
 				84F414DB259AFDA3007B47B5 /* TofyKeys.xcdatamodeld in Sources */,
 				84F414F0259B68C7007B47B5 /* ClavesViewModel.swift in Sources */,
 				84F414502599FE01007B47B5 /* ClavesView.swift in Sources */,
-				84F41502259D341F007B47B5 /* TipoSeguridadCambiadoView.swift in Sources */,
+				84F41502259D341F007B47B5 /* InformacionPopUpView.swift in Sources */,
 				84F41415259400CB007B47B5 /* ApiManager.swift in Sources */,
 				84F414372597266A007B47B5 /* ConfigurarPinView.swift in Sources */,
 				84F41445259728AB007B47B5 /* PinTextField.swift in Sources */,
@@ -534,6 +545,7 @@
 				84F414D5259A8E2E007B47B5 /* DetalleClaveView.swift in Sources */,
 				84F414E0259AFEBC007B47B5 /* ClavesManager.swift in Sources */,
 				84FA0AA2257A611F0013B1CF /* TextView.swift in Sources */,
+				84F41511259E339F007B47B5 /* AppInfoView.swift in Sources */,
 				84F414312597251E007B47B5 /* BaseView.swift in Sources */,
 				84F414FD259D2FE5007B47B5 /* CerrarSesionView.swift in Sources */,
 				84F414BE259A47A8007B47B5 /* SeguridadView.swift in Sources */,
@@ -707,8 +719,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Tofy/Preview Content\"";
+				DEVELOPMENT_TEAM = D5PK29TDFS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tofy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -716,8 +731,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codebounds.Tofy;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codebounds.tofykeys.development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TofyKeysDevelopmentProfile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -728,8 +745,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Tofy/Preview Content\"";
+				DEVELOPMENT_TEAM = D5PK29TDFS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tofy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -737,8 +757,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codebounds.Tofy;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codebounds.tofykeys.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TofyKeysProductionProfile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

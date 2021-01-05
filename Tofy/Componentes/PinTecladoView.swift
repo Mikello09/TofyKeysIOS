@@ -13,6 +13,7 @@ struct PinTecladoView: View {
     @State var error: String = ""
     
     var usuarioAutorizado: () -> ()
+    @Binding var showTeclado: Bool
     
     var body: some View {
         ZStack{
@@ -67,6 +68,14 @@ struct PinTecladoView: View {
                             EmptyView()
                         }
                         .frame(height: 80)
+                        HStack{
+                            Spacer()
+                            Text("Cerrar")
+                                .error()
+                                .onTapGesture {
+                                    self.showTeclado = false
+                                }
+                        }
                     }
                 }
                 .padding()

@@ -30,24 +30,20 @@ struct LoginView: View {
             BaseView(showLoader: $showLoader, content:
                     ZStack{
                         VStack{
-                            Text("appName".localized)
-                                .titulo(color: Color.principal)
-                                .padding()
-                            
                             TextField("email".localized, text: $emailText)
                                 .modifier(CustomEditText(imagen: "person_icon"))
-                            .padding()
+                                .padding()
+                                .padding(.top)
                             
-                            TextField("pass".localized, text: $passText)
+                            SecureField("pass".localized, text: $passText)
                                 .modifier(CustomEditText(imagen: "pass_icon"))
-                            .padding([.leading, .trailing])
+                                .padding([.leading, .trailing])
                             HStack{
                                 Text(errorValue)
                                     .error()
                                 Spacer()
                             }
                             .padding([.leading, .trailing])
-                            
                             Button(action: {
                                 if isEntrarEnabled(){
                                     showLoader = true
@@ -55,7 +51,15 @@ struct LoginView: View {
                                     viewModel.entrar(email: emailText, contrasena: passText)
                                 }
                             }){EmptyView()}.buttonStyle(BotonPrincipal(text: "entrar".localized, enabled: self.isEntrarEnabled()))
-                            .padding()
+                            .padding([.leading, .trailing])
+                            Image("tofy_icon")
+                                .resizable()
+                                .frame(width: 150, height: 150)
+                                .padding(.top)
+                                .padding(.top)
+                            Text("appName".localized)
+                                .titulo(color: Color.principal)
+                            
                             Spacer()
                             Text("noTienesCuenta".localized)
                                 .boton()
@@ -63,21 +67,27 @@ struct LoginView: View {
                                 .onTapGesture {
                                     goToRegistro.toggle()
                                 }
-                            Group{
-                                NavigationLink(destination: RegistroView(), isActive: $goToRegistro){EmptyView()}
-                                NavigationLink(destination: ClavesView().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext), isActive: $goToClaves){EmptyView()}
-                            }
                         }
                         if showPinTeclado{
-                            PinTecladoView(usuarioAutorizado: usuarioAutorizado)
+                            PinTecladoView(usuarioAutorizado: usuarioAutorizado, showTeclado: $showPinTeclado)
                         }
                         if showUnLock{
-                            LottieView(name: "unlock", play: .constant(1), loopMode: .playOnce, loopFinished: unlockAnimationTerminado)
-                                .frame(width: 200, height: 200)
+                            ZStack{
+                                Color(.grisTransparente)
+                                LottieView(name: "unlock", play: .constant(1), loopMode: .playOnce, loopFinished: unlockAnimationTerminado)
+                                    .frame(width: 300, height: 300)
+                            }.ignoresSafeArea(.all)
+                            
+                        }
+                        Group{
+                            NavigationLink(destination: RegistroView(), isActive: $goToRegistro){EmptyView()}
+                            NavigationLink(destination: ClavesView().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext), isActive: $goToClaves){EmptyView()}
                         }
                     })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
+        .navigationBarTitle("")
         .onAppear{
             self.viewModel.iniciarApp()
         }
@@ -89,7 +99,9 @@ struct LoginView: View {
                 case .pin:
                     showPinTeclado = true
                 case .biometria:
-                    print("todo")
+                    BiometriaHelper.pedirBiometria{
+                        showUnLock = true
+                    }
                 }
             }
         }

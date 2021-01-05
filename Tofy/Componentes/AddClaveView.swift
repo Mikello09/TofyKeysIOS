@@ -35,7 +35,7 @@ struct AddClaveView: View {
                 VStack{
                     Text("anadirClave".localized)
                         .titulo(color: .negro)
-                    TextField("email".localized, text: $titulo)
+                    TextField("titulo".localized, text: $titulo)
                         .modifier(CustomEditText(imagen: "titulo_icon"))
                         .padding([.leading, .trailing])
                     HStack{

@@ -7,31 +7,30 @@
 
 import SwiftUI
 
-struct TipoSeguridadCambiadoView: View {
+struct InformacionPopUpView: View {
     
-    @Binding var showTipoSeguridadCambiado: Bool
-    var aceptar: ()->()
-    var tipoSeguridad: TipoSeguridad
+    @Binding var showInformacionPopUp: Bool
+    var aceptar: (()->())?
+    var texto: String
+    var imagen: String
     
     var body: some View {
         ZStack{
             Color.grisTransparente
             VStack{
                 VStack{
-                    Text(tipoSeguridad.mensaje())
+                    Text(texto)
                         .titulo(color: .negro)
                         .multilineTextAlignment(.center)
                         .lineLimit(nil)
                         .padding()
-                    if tipoSeguridad != .ninguna{
-                        Image(tipoSeguridad.imagen())
-                            .resizable()
-                            .frame(width: 48, height: 48)
-                    }
+                    Image(imagen)
+                        .resizable()
+                        .frame(width: 48, height: 48)
                     HStack{
                         Button(action: {
-                            aceptar()
-                            showTipoSeguridadCambiado = false
+                            accion()
+                            showInformacionPopUp = false
                         }){EmptyView()}.buttonStyle(BotonConColor(color: .principal, texto: "aceptar".localized))
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -44,5 +43,11 @@ struct TipoSeguridadCambiadoView: View {
             .padding()
         }
         .ignoresSafeArea()
+    }
+    
+    func accion(){
+        if let accionAceptar = aceptar{
+            accionAceptar()
+        }
     }
 }

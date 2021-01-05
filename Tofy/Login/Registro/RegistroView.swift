@@ -29,15 +29,15 @@ struct RegistroView: View {
                     .padding()
                 
                 TextField("email".localized, text: $email)
-                .modifier(CustomEditText())
+                .modifier(CustomEditText(imagen: "person_icon"))
                 .padding([.leading, .trailing])
                 
-                TextField("pass".localized, text: $contrasena1)
-                .modifier(CustomEditText())
+                SecureField("pass".localized, text: $contrasena1)
+                .modifier(CustomEditText(imagen: "pass_icon"))
                 .padding([.leading, .trailing, .top])
                 
-                TextField("repetirPass".localized, text: $contrasena2)
-                .modifier(CustomEditText())
+                SecureField("repetirPass".localized, text: $contrasena2)
+                .modifier(CustomEditText(imagen: "pass_icon"))
                 .padding([.leading, .trailing, .top])
                 
                 HStack{

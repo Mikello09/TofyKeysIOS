@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MenuView: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     @State var showLoader: Bool = false
     
     @State var cerrarSesion: Bool = false
@@ -16,6 +16,7 @@ struct MenuView: View {
     @State var goToAppInfo: Bool = false
     
     @State var showCerrarSesion: Bool = false
+    var cerrarSesionAccion: ()->()
     
     var body: some View {
         BaseView(showLoader: $showLoader,
@@ -74,8 +75,8 @@ struct MenuView: View {
                                     }
                             }
                             Group{
-                                NavigationLink(destination: LoginView(), isActive: $cerrarSesion){EmptyView()}
                                 NavigationLink(destination: SeguridadView(), isActive: $goToSeguridad){EmptyView()}
+                                NavigationLink(destination: AppInfoView(), isActive: $goToAppInfo){EmptyView()}
                             }
                         }
                         if showCerrarSesion{
@@ -87,14 +88,9 @@ struct MenuView: View {
     }
     
     func cerrarSesionAction(){
-        eliminarUsuario()
-        ClavesManager().eliminarTodasLasClaves()
-        cerrarSesion = true
+        self.presentationMode.wrappedValue.dismiss()
+        cerrarSesionAccion()
     }
 }
 
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
-    }
-}
+

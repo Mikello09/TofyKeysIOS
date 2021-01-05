@@ -21,6 +21,7 @@ class RegistroViewModel: ObservableObject{
         if contrasena1 != contrasena2{
             self.error = "Las contraseñas deben ser iguales"
         } else {
+            ClavesManager().eliminarTodasLasClaves()//vaciamos las claves actuales si las hay
             cancelable = llamadaRegistro(email: email, contrasena: contrasena1).sink(receiveCompletion: {
                 switch $0{
                 case .failure(let err):

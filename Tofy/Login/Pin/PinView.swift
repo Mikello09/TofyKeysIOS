@@ -107,7 +107,7 @@ struct PinView: View {
                     .padding([.leading, .trailing])
                     
                     if tipoBiometria != .ninguna{
-                        InfoBiometriaView(biometriaActiva: $biometriaActiva)
+                        InfoBiometriaView(biometriaActiva: $biometriaActiva, tipoBiometria: tipoBiometria)
                             .padding()
                     }
                     

@@ -12,25 +12,25 @@ enum TipoSeguridad: String, Codable{
     case pin = "Pin"
     case biometria = "Biometria"
     
-    func mensaje() -> String{
+    func mensaje(tipoBiometria: TipoBiometria) -> String{
         switch self{
         case .ninguna:
             return "seguridadNingunaMensaje".localized
         case .pin:
             return "seguridadPinMensaje".localized
         case .biometria:
-            return "seguridadBiometriaMensaje".localized
+            return tipoBiometria == .touchID ? "seguridadTouchIDMensaje".localized : "seguridadFaceIDMensaje".localized
         }
     }
     
-    func imagen() -> String{
+    func imagen(tipoBiometria: TipoBiometria) -> String{
         switch self{
         case .ninguna:
             return ""
         case .pin:
             return "pin_icon"
         case .biometria:
-            return "huella_icon"
+            return tipoBiometria.icono()
         }
     }
 }

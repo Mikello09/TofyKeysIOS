@@ -10,11 +10,12 @@ import SwiftUI
 import Combine
 
 //URLS
-let loginUrl: String = "https://tofyserver.herokuapp.com/usuario/doLogin"
-let registroUrl: String = "https://tofyserver.herokuapp.com/usuario/registro"
-let getAllClavesUrl: String = "https://tofyserver.herokuapp.com/clave/getAllClaves"//token
-let eliminarClaveUrl: String = "https://tofyserver.herokuapp.com/clave/eliminarClave"//token
-let guardarClaveUrl: String = "https://tofyserver.herokuapp.com/clave/guardarClave"//usuarioToken, token, titulo, valor, usuario, contrasena, fecha
+let baseUrl: String = "https://tofyserver.herokuapp.com"
+let loginUrl: String = "\(baseUrl)/usuario/doLogin"
+let registroUrl: String = "\(baseUrl)/usuario/registro"
+let getAllClavesUrl: String = "\(baseUrl)/clave/getAllClaves"//token
+let eliminarClaveUrl: String = "\(baseUrl)/clave/eliminarClave"//token
+let guardarClaveUrl: String = "\(baseUrl)/clave/guardarClave"//usuarioToken, token, titulo, valor, usuario, contrasena, fecha
 
 let SESION: URLSession = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
     

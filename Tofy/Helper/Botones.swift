@@ -75,7 +75,7 @@ struct BotonCircular: ButtonStyle{
         ZStack(alignment: .center){
             Circle()
                 .fill(Color.principal)
-                .frame(width: 100, height: 100)
+                .frame(width: 70, height: 70)
             Image("add_icon_blanco")
                 .resizable()
                 .frame(width: 40, height: 40)

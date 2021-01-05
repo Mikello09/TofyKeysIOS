@@ -10,6 +10,7 @@ import SwiftUI
 struct InfoBiometriaView: View {
     
     @Binding var biometriaActiva: Bool
+    var tipoBiometria: TipoBiometria
     
     var body: some View {
         VStack{
@@ -24,7 +25,7 @@ struct InfoBiometriaView: View {
                 .lineLimit(nil)
                 .multilineTextAlignment(.leading)
             HStack{
-                Text("activarBiometria".localized)
+                Text(tipoBiometria.activarMensaje())
                     .bold()
                 Spacer()
                 Toggle(isOn: $biometriaActiva){EmptyView()}

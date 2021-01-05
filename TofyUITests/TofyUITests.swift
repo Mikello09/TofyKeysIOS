@@ -4,7 +4,6 @@
 //
 //  Created by usuario on 02/12/2020.
 //
-
 import XCTest
 
 class TofyUITests: XCTestCase {
