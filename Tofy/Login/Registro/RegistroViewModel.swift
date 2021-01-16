@@ -18,15 +18,18 @@ class RegistroViewModel: ObservableObject{
     var cancelable: Cancellable?
     
     func registrar(email: String, contrasena1: String, contrasena2: String){
-        if contrasena1 != contrasena2{
-            self.error = "Las contraseñas deben ser iguales"
+        if !email.isValidEmail(){
+            self.error = "errorEmail".localized
+        }
+        else if contrasena1 != contrasena2{
+            self.error = "contrasenasIguales".localized
         } else {
             ClavesManager().eliminarTodasLasClaves()//vaciamos las claves actuales si las hay
             cancelable = llamadaRegistro(email: email, contrasena: contrasena1).sink(receiveCompletion: {
                 switch $0{
                 case .failure(let err):
                     guard let error = err as? TofyError else {
-                        self.error = "Error en el parseo del error"
+                        self.error = "errorParseo".localized
                         return
                     }
                     self.error = error.reason

@@ -54,3 +54,7 @@
 "version" = "Versión";
 "hola" = "Hola";
 "errorEliminarClave" = "La clave no se ha podido eliminar. Compruebe la conexión a internet y pruebe otra vez.";
+"errorEmail" = "El email no tiene el formato correcto";
+"contrasenasIguales" = "Las contraseñas deben ser iguales";
+"errorParseo" = "Error en el parseo del error";
+"registro" = "Registro";

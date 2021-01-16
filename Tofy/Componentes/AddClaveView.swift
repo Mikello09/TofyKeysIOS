@@ -36,6 +36,7 @@ struct AddClaveView: View {
                     Text("anadirClave".localized)
                         .titulo(color: .negro)
                     TextField("titulo".localized, text: $titulo)
+                        .foregroundColor(.negro)
                         .modifier(CustomEditText(imagen: "titulo_icon"))
                         .padding([.leading, .trailing])
                     HStack{
@@ -53,13 +54,16 @@ struct AddClaveView: View {
                     .padding()
                     if valorSeleccionado{
                         TextField("usuario".localized, text: $valor)
+                            .foregroundColor(.negro)
                             .modifier(CustomEditText(imagen: "valor_icon"))
                             .padding([.leading, .trailing])
                     } else {
                         TextField("usuario".localized, text: $usuario)
+                            .foregroundColor(.negro)
                             .modifier(CustomEditText(imagen: "person_icon"))
                             .padding([.leading, .trailing])
                         TextField("pass".localized, text: $contrasena)
+                            .foregroundColor(.negro)
                             .modifier(CustomEditText(imagen: "pass_icon"))
                             .padding([.leading, .trailing])
                     }

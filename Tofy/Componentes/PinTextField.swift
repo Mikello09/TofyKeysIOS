@@ -85,7 +85,8 @@ struct PinTextField: UIViewRepresentable {
       textField.delegate = context.coordinator
       textField.textAlignment = .center
       textField.font = UIFont(name: "SourceSansPro-SemiBold", size: 20)
-      textField.tintColor = UIColor.negro
+      textField.tintColor = .negro
+      textField.textColor = .negro
       return textField
   }
 

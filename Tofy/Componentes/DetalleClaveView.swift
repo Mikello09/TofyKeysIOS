@@ -33,17 +33,21 @@ struct DetalleClaveView: View {
                             .titulo(color: .negro)
                             .padding()
                         TextField("titulo".localized, text: $tituloEditado)
+                            .foregroundColor(.negro)
                             .modifier(CustomEditText(imagen: "titulo_icon"))
                             .padding([.leading, .trailing])
                         if clave.valor != ""{
                             TextField("usuario".localized, text: $valorEditado)
+                                .foregroundColor(.negro)
                                 .modifier(CustomEditText(imagen: "valor_icon"))
                                 .padding([.leading, .trailing])
                         } else {
                             TextField("usuario".localized, text: $usuarioEditado)
+                                .foregroundColor(.negro)
                                 .modifier(CustomEditText(imagen: "person_icon"))
                                 .padding([.leading, .trailing])
                             TextField("pass".localized, text: $contrasenaEditado)
+                                .foregroundColor(.negro)
                                 .modifier(CustomEditText(imagen: "pass_icon"))
                                 .padding([.leading, .trailing])
                         }

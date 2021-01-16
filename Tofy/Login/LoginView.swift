@@ -31,11 +31,13 @@ struct LoginView: View {
                     ZStack{
                         VStack{
                             TextField("email".localized, text: $emailText)
+                                .foregroundColor(.negro)
                                 .modifier(CustomEditText(imagen: "person_icon"))
                                 .padding()
                                 .padding(.top)
                             
                             SecureField("pass".localized, text: $passText)
+                                .foregroundColor(.negro)
                                 .modifier(CustomEditText(imagen: "pass_icon"))
                                 .padding([.leading, .trailing])
                             HStack{

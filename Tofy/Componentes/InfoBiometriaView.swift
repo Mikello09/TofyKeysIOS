@@ -18,6 +18,7 @@ struct InfoBiometriaView: View {
                 Image("tofy_icon")
                     .resizable()
                     .frame(width: 24, height: 24)
+                    .padding(.leading)
                 Spacer()
             }
             Text("biometriaInfo".localized)

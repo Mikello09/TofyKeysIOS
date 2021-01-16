@@ -29,16 +29,19 @@ struct RegistroView: View {
                     .padding()
                 
                 TextField("email".localized, text: $email)
-                .modifier(CustomEditText(imagen: "person_icon"))
-                .padding([.leading, .trailing])
+                    .foregroundColor(.negro)
+                    .modifier(CustomEditText(imagen: "person_icon"))
+                    .padding([.leading, .trailing])
                 
                 SecureField("pass".localized, text: $contrasena1)
-                .modifier(CustomEditText(imagen: "pass_icon"))
-                .padding([.leading, .trailing, .top])
+                    .foregroundColor(.negro)
+                    .modifier(CustomEditText(imagen: "pass_icon"))
+                    .padding([.leading, .trailing, .top])
                 
                 SecureField("repetirPass".localized, text: $contrasena2)
-                .modifier(CustomEditText(imagen: "pass_icon"))
-                .padding([.leading, .trailing, .top])
+                    .foregroundColor(.negro)
+                    .modifier(CustomEditText(imagen: "pass_icon"))
+                    .padding([.leading, .trailing, .top])
                 
                 HStack{
                     Text(errorTexto)
@@ -58,7 +61,7 @@ struct RegistroView: View {
                 Group{
                     NavigationLink(destination: ConfigurarPinView(), isActive: $goToConfigurarPin){}
                 }
-            }, titulo: "Registro"
+            }, titulo: "registro".localized
         )
         .onReceive(self.viewModel.$error){ value in
             if let error = value{
@@ -75,7 +78,7 @@ struct RegistroView: View {
     }
     
     func camposCompletos() -> Bool{
-        return !email.isEmpty || !contrasena1.isEmpty || !contrasena2.isEmpty
+        return !email.isEmpty && !contrasena1.isEmpty && !contrasena2.isEmpty
     }
 }
 

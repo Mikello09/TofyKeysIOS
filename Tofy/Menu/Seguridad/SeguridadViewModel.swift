@@ -22,9 +22,8 @@ class SeguridadViewModel: ObservableObject{
     
     func obtenerTipoBiometria(){
         cancellable = BiometriaHelper.getTipoBiometria()
-            .receive(on: DispatchQueue.main)
             .sink(receiveValue: { tipo in
-                self.tipoBiometria = tipo
+                    self.tipoBiometria = tipo
             })
     }
     
